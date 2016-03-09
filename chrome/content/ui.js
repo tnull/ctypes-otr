@@ -377,7 +377,9 @@ var ui = {
       callback: function() {
         let name = uiConv.target.normalizedName;
         ui.openAuth(window, otrAuth, name, "start", uiConv);
-        return false;
+
+		// prevent closing of notification bar when the button is hit
+        return true;
       }
     }];
 
